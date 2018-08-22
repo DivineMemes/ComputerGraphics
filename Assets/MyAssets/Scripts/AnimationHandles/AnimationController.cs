@@ -11,6 +11,7 @@ public class AnimationController : MonoBehaviour
     public bool WaitForHadukenb;
     public bool WaitForIceb;
     public bool WaitForSummonb;
+    public bool IsInAnimation;
 	void Start ()
     {
         anim = GetComponent<Animator>();
@@ -24,72 +25,86 @@ public class AnimationController : MonoBehaviour
         bool Iceblast = Input.GetKeyDown(KeyCode.Alpha4);
         bool Summon = Input.GetKeyDown(KeyCode.Alpha5);
 
-        if(fireball && !WaitForFireb)
+        if(!IsInAnimation)
         {
-            StartCoroutine(WaitForFire());
-            anim.SetTrigger("Fireball");
-        }
-        if(Lightning && !WaitForLightningb)
-        {
-            StartCoroutine(WaitForLightning());
-            anim.SetTrigger("Lightning");
-        }
-        if(Haduken && !WaitForHadukenb)
-        {
-            StartCoroutine(WaitForHaduken());
-            anim.SetTrigger("Haduken");
-        }
-        if(Iceblast && !WaitForIceb)
-        {
-            StartCoroutine(WaitForIce());
-            anim.SetTrigger("IceBlast");
-        }
-        if(Summon && !WaitForSummonb)
-        {
-            StartCoroutine(WaitForSummon());
-            anim.SetTrigger("Summon");
-        }
+            if (fireball && !WaitForFireb)
+            {
+                StartCoroutine(WaitForFire());
+                anim.SetTrigger("Fireball");
+            }
+            if (Lightning && !WaitForLightningb)
+            {
+                StartCoroutine(WaitForLightning());
+                anim.SetTrigger("Lightning");
+            }
+            if (Haduken && !WaitForHadukenb)
+            {
+                StartCoroutine(WaitForHaduken());
+                anim.SetTrigger("Haduken");
+            }
+            if (Iceblast && !WaitForIceb)
+            {
+                StartCoroutine(WaitForIce());
+                anim.SetTrigger("IceBlast");
+            }
+            if (Summon && !WaitForSummonb)
+            {
+                StartCoroutine(WaitForSummon());
+                anim.SetTrigger("Summon");
+            }
 
-        if(!Idle)
-        {
-            anim.SetBool("Idle", false);
+            if (!Idle)
+            {
+                anim.SetBool("Idle", false);
+            }
         }
-	}
+    }
+        
 
 
     IEnumerator WaitForFire()
     {
+        IsInAnimation = true;
         WaitForFireb = true;
         yield return new WaitForSeconds(2.300f);
-        WaitForIceb = false;
+        WaitForFireb = false;
+        IsInAnimation = false;
     }
     
     IEnumerator WaitForLightning()
     {
+        IsInAnimation = true;
         WaitForLightningb = true;
         yield return new WaitForSeconds(4.300f);
         WaitForLightningb = false;
+        IsInAnimation = false;
     }
 
     IEnumerator WaitForHaduken()
     {
+        IsInAnimation = true;
         WaitForHadukenb = true;
         yield return new WaitForSeconds(3.333f);
         WaitForHadukenb = false;
+        IsInAnimation = false;
     }
 
     IEnumerator WaitForIce()
     {
+        IsInAnimation = true;
         WaitForIceb = true;
         yield return new WaitForSeconds(2.633f);
         WaitForIceb = false;
+        IsInAnimation = false;
     }
 
     IEnumerator WaitForSummon()
     {
+        IsInAnimation = true;
         WaitForSummonb = true;
         yield return new WaitForSeconds(2.167f);
         WaitForSummonb = false;
+        IsInAnimation = false;
     }
 
 }
