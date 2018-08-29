@@ -22,7 +22,13 @@ public class AnimationController : MonoBehaviour
     [SerializeField]
     ParticleSystem RightLightningSyst;
 
-
+    //Ice Particle Stuff
+    [SerializeField]
+    ParticleSystem IceBlast;
+    [SerializeField]
+    ParticleSystem LeftFrost;
+    [SerializeField]
+    ParticleSystem RightFrost;
 
 
 
@@ -79,6 +85,10 @@ public class AnimationController : MonoBehaviour
             {
                 StartCoroutine(WaitForIceBlast());
                 anim.SetTrigger("IceBlast");
+                LeftFrost.Play();
+                RightFrost.Play();
+                StartCoroutine(IceBlastParticle());
+
             }
 
             if (Hadoken && !WaitForHadokenb)
@@ -148,7 +158,7 @@ public class AnimationController : MonoBehaviour
 
     IEnumerator HadokenParticleStartup()
     {
-        yield return new WaitForSeconds(1.033f);
+        yield return new WaitForSeconds(1.067f);
         HadokenStartup.Play();
     }
     IEnumerator HadokenBlastParticle()
@@ -162,7 +172,15 @@ public class AnimationController : MonoBehaviour
         WaitForIceb = true;
         yield return new WaitForSeconds(3.333f);
         WaitForIceb = false;
+        IceBlast.Stop();
+        RightFrost.Stop();
+        LeftFrost.Stop();
         IsInAnimation = false;
+    }
+    IEnumerator IceBlastParticle()
+    {
+        yield return new WaitForSeconds(1.00f);
+        IceBlast.Play();
     }
 
     IEnumerator WaitForSummon()

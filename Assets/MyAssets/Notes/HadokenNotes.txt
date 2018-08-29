@@ -10,3 +10,8 @@ start charge animation at 1.033 seconds
 .533 seconds of charge time
 
 start particle animation for released hadoken at 1.567 seconds
+
+Angle:
+X:-103.462
+Y:-85.91699
+Z:97.376
