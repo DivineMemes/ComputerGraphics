@@ -20,13 +20,13 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: Haduken
+  - m_Name: IceBlast
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 0}
-  - m_Name: IceBlast
+  - m_Name: Hadoken
     m_Type: 9
     m_DefaultFloat: 0
     m_DefaultInt: 0
@@ -89,7 +89,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: Haduken
+    m_ConditionEvent: IceBlast
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102237043259901116}
@@ -158,7 +158,7 @@ AnimatorStateTransition:
   m_Name: 
   m_Conditions:
   - m_ConditionMode: 1
-    m_ConditionEvent: IceBlast
+    m_ConditionEvent: Hadoken
     m_EventTreshold: 0
   m_DstStateMachine: {fileID: 0}
   m_DstState: {fileID: 1102208714384127438}
@@ -338,7 +338,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: IceBlast
+  m_Name: Hadoken
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -390,7 +390,7 @@ AnimatorState:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Haduken
+  m_Name: IceBlast
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions:
@@ -477,10 +477,10 @@ AnimatorStateMachine:
     m_Position: {x: -60, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102237043259901116}
-    m_Position: {x: 348, y: -60, z: 0}
+    m_Position: {x: 348, y: 12, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102208714384127438}
-    m_Position: {x: 348, y: 12, z: 0}
+    m_Position: {x: 348, y: -60, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 1102069252147679016}
     m_Position: {x: 348, y: 84, z: 0}

@@ -1,0 +1,12 @@
+frame 31 charge
+
+
+realease charge and throw frame 47
+
+
+
+start charge animation at 1.033 seconds
+
+.533 seconds of charge time
+
+start particle animation for released hadoken at 1.567 seconds
