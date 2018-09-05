@@ -408,7 +408,9 @@
     <None Include="Assets\ImportedAssets\PostProcessing-2\PostProcessing\Shaders\Sampling.hlsl" />
     <None Include="Assets\ImportedAssets\PostProcessing-2\PostProcessing\Shaders\StdLib.hlsl" />
     <None Include="Assets\ImportedAssets\PostProcessing-2\PostProcessing\Shaders\xRLib.hlsl" />
+    <None Include="Assets\MyAssets\Notes\FireballNotes.txt" />
     <None Include="Assets\MyAssets\Notes\HadokenNotes.txt" />
+    <None Include="Assets\MyAssets\Notes\IceNotes.txt" />
     <None Include="Assets\MyAssets\Notes\Lightning Frames.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -1,0 +1,4 @@
+start hand particle at .6
+
+
+shoot fireball at 1.0

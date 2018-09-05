@@ -30,7 +30,12 @@ public class AnimationController : MonoBehaviour
     [SerializeField]
     ParticleSystem RightFrost;
 
+    //Fireball particle stuff
 
+    [SerializeField]
+    ParticleSystem FireBall;
+    [SerializeField]
+    ParticleSystem FireRing;
 
     public bool Idle = true;
     public Animator anim;
@@ -70,6 +75,8 @@ public class AnimationController : MonoBehaviour
             {
                 StartCoroutine(WaitForFire());
                 anim.SetTrigger("Fireball");
+                StartCoroutine(FireRingParticle());
+                StartCoroutine(FireBallParticle());
             }
 
             if (Lightning && !WaitForLightningb)
@@ -122,9 +129,21 @@ public class AnimationController : MonoBehaviour
         WaitForFireb = true;
         yield return new WaitForSeconds(2.300f);
         WaitForFireb = false;
+        FireBall.Stop();
         IsInAnimation = false;
     }
     
+    IEnumerator FireRingParticle()
+    {
+        yield return new WaitForSeconds(0.6f);
+        FireRing.Play();
+    }
+    IEnumerator FireBallParticle()
+    {
+        FireRing.Stop();
+        yield return new WaitForSeconds(1.0f);
+        FireBall.Play();
+    }
     IEnumerator WaitForLightning()
     {
         IsInAnimation = true;
