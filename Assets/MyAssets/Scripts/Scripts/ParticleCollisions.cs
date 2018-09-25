@@ -17,7 +17,7 @@ public class ParticleCollisions : MonoBehaviour
         for (int i = 0; i < collisionEvents.Count; i++)
         {
             otherSystem.Play();
-            particleLauncher.Stop();
+            particleLauncher.Stop(true);
         }
     }
 }
