@@ -427,6 +427,7 @@
     <None Include="Assets\MyAssets\Notes\HadokenNotes.txt" />
     <None Include="Assets\MyAssets\Notes\IceNotes.txt" />
     <None Include="Assets\MyAssets\Notes\Lightning Frames.txt" />
+    <None Include="Assets\MyAssets\Scripts\Shaders\ImageEffects\DeepFry.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

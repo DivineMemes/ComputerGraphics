@@ -364,7 +364,11 @@
     <Compile Include="Assets\ImportedAssets\LightningBolt\LightningBoltScript.cs" />
     <Compile Include="Assets\MyAssets\Scripts\AnimationHandles\AnimationController.cs" />
     <Compile Include="Assets\MyAssets\Scripts\ParticleScripts\FirehandParticleEffect.cs" />
-    <Compile Include="Assets\MyAssets\Scripts\Shaders\Bleh.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\postProcesses\DeepFry.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\Scripts\CameraSwitch.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\Scripts\DeepFryer.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\Scripts\ParticleCollisions.cs" />
+    <Compile Include="Assets\MyAssets\Scripts\Scripts\PixelationSlider.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\ImportedAssets\Cinemachine\ReleaseNotes.txt" />
@@ -438,6 +442,7 @@
     <None Include="Assets\MyAssets\Notes\HadokenNotes.txt" />
     <None Include="Assets\MyAssets\Notes\IceNotes.txt" />
     <None Include="Assets\MyAssets\Notes\Lightning Frames.txt" />
+    <None Include="Assets\MyAssets\Scripts\Shaders\ImageEffects\DeepFry.shader" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
